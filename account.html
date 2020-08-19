@@ -8,6 +8,7 @@
 
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, inital-scale=1.0">
+	<meta name="description" content="Want to purchase different product well, Red Store has it from shirt to shoes to pants and watches.">
 	<title>All Product Page | E-Commerce | Kyle Y. Parsotan</title>
 	<link rel="stylesheet" href="style.css">
 	<!-- google fonts -->
@@ -19,7 +20,7 @@
 	<div class="container">
 		<div class="navbar">
 			<div class="logo">
-				<img src="images/logo.png" width="125px">
+				<a href="index.html"><img src="images/logo.png" width="125px"></a>
 			</div>
 			<nav>
 				<ul id="MenuItems">
@@ -35,8 +36,41 @@
 		</div>
 	</div>
 
+	<!-- Account-page -->
 
-	
+	<div class="account-page">
+		<div class="row">
+			<div class="col-2">
+				<img src="images/image1.png" width="100%">
+			</div>
+
+			<div class="col-2">
+				<div class="form-container">
+					<div class="form-btn">
+						<span onclick="login()">Login</span>
+						<span onclick="register()">Register</span>
+						<hr id="Indicator">
+					</div>
+
+					<form id="LoginForm">
+						<input type="text" placeholder="Username">
+						<input type="password" placeholder="Password">
+						<button type="submit" class="btn">Login</button>
+						<a href="ForgetPassword.html">Forget Password</a>
+					</form>
+
+					<form id="RegForm">
+						<input type="Name_first" placeholder="First Name">
+						<input type="Name_last" placeholder="Last Name">
+						<input type="text" placeholder="Username">
+						<input type="email" placeholder="Email">
+						<input type="password" placeholder="Password">
+						<button type="submit" class="btn">Register</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	
 	<!-- Footer -->
@@ -45,7 +79,7 @@
 			<div class="row">
 				<div class="footer-col-1">
 					<h3>Download Our App</h3>
-					<p>Download Our App for Android and IOS moblie phone.</p>
+				  <p>Download Our App for Android and IOS moblie phone.</p>
 					<div class="app-logo">
 						<img src="images/play-store.png">
 						<img src="images/app-store.png">
@@ -99,33 +133,29 @@
 		}
 	</script>
 
-	<!-- Js for product gallery -->
+	<!-- Js for toogle form -->
 
-	<!-- <script>
+	<script>
 		
-		var ProductImg  = document.getElementById("ProductImg");
-		var SmallImg = document.getElementsByClassName("small-img")
+		var LoginForm = document.getElementById("LoginForm");
+		var RegForm = document.getElementById("RegForm");
+		var Indicator = document.getElementById("Indicator");
 
-			SmallImg[0].onclick = function(){
+			function register(){
 
-				ProductImg.src = SmallImg[0].src;
+				RegForm.style.transform = "translateX(0px)";
+				LoginForm.style.transform = "translateX(0px)";
+				Indicator.style.transform = "translateX(100px)";
 			}
 
-			SmallImg[1].onclick = function(){
+			function login(){
 
-				ProductImg.src = SmallImg[1].src;
+				RegForm.style.transform = "translateX(300px)";
+				LoginForm.style.transform = "translateX(300px)";
+				Indicator.style.transform = "translateX(0px)";
 			}
 
-			SmallImg[2].onclick = function(){
-
-				ProductImg.src = SmallImg[2].src;
-			}
-
-			SmallImg[3].onclick = function(){
-
-				ProductImg.src = SmallImg[3].src;
-			}
-	</script> -->
+	</script>
 
 </body>
 </html>
